@@ -199,9 +199,16 @@ const filteredFood = foodArr.filter((e) => e.tags.includes(`pepperoni`))
     Return the filtered array from the entire function
 */
 
-const filterByProperty = (property, number, type) => {
-    let filteredArray = [] 
-
+const filterByProperty = (property, num, type) => {
+    let filteredArray = foodArr.filter(() => {
+        if (type === `above`){
+            return property >= num
+        }
+        if (type === `below`){
+            return property <= num
+        }
+     }) 
+     console.log(filteredArray)
 }
 
 
@@ -215,4 +222,7 @@ const filterByProperty = (property, number, type) => {
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+
+filterByProperty("popularity", 8, `above`)
+
+//couldn't figure it out :(
