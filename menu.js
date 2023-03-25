@@ -30,7 +30,14 @@
     'kids'
 */
 
-//CODE HERE
+const pizza = {
+    name: `meats`,
+    price: 17.99,
+    category: `speacialty`,
+    popularity: 9,
+    rating: 8,
+    tags: [`pepperoni`, `sausage`, `meat`]
+}
 
 
 
@@ -42,7 +49,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.popularity);
 
 
 /*
@@ -52,7 +59,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza.tags[1]);
 
 
 /*
@@ -62,7 +69,8 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+let {price} = pizza
+console.log(price)
 
 
 /*
@@ -72,7 +80,8 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+let {category} = pizza
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -87,7 +96,48 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
+const foodArr = [
+    {
+        name: `meats`,
+        price: 17.99,
+        category: `speacialty`,
+        popularity: 9,
+        rating: 8,
+        tags: [`pepperoni`, `sausage`, `meat`]
+    },
+    {
+        name: `works`,
+        price: 19.99,
+        category: `speacialty`,
+        popularity: 8,
+        rating: 6,
+        tags: [`pepperoni`, `onions`, `supreme`]
+    },
+    {
+        name: `pepperoni`,
+        price: 15.99,
+        category: `one topping`,
+        popularity: 10,
+        rating: 10,
+        tags: [`pepperoni`, `classic`, `one topping`]
+    },
+    {
+        name: `bbq chicken`,
+        price: 18.99,
+        category: `bbq pizza`,
+        popularity: 9,
+        rating: 5,
+        tags: [`chicken`, `bbq`, `onion`]
+    },
+    {
+        name: `cheese`,
+        price: 12.99,
+        category: `plain`,
+        popularity: 6,
+        rating: 8,
+        tags: [`cheese`, `plain`, `simple`]
+    }
+]
 
 
 
@@ -105,7 +155,8 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((e) => e.tags.includes(`pepperoni`))
+// console.log(filteredFood)
 
 
 
@@ -148,7 +199,13 @@
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+const filterByProperty = (property, number, type) => {
+    let filteredArray = [] 
+
+}
+
+
+
 
 
 /*
