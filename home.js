@@ -21,7 +21,8 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
+const greetUser = username => console.log(`Welcome back ${username}`)
+// greetUser(`Andrew`)
 
 
 
@@ -49,8 +50,15 @@
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-//CODE HERE
+const canWeDeliver = zipcode => {
+    if(deliveryAreaZipCodes.includes(zipcode)){
+        console.log(`We can deliver to you!`)
+    }else {
+        console.log(`You are outside of our delivery area.`)
+    }
+}
 
+// canWeDeliver(85289)
 
 
 /* 
@@ -70,8 +78,21 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+const weCanDeliver2 = (arr, zipcode) => {
+    answer = false
+    for (let i=0; i<arr.length; i++){
+        if(arr[i] === zipcode){
+            answer = true
+        }
+    }
+    if(answer === true){
+        console.log(`We can delivwer to you!`)
+    }else {
+        console.log(`You are outside our delivery area.`)
+    }
+}
 
+// weCanDeliver2(deliveryAreaZipCodes, 85305)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -106,7 +127,16 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
+const replace = arr => {
+    for (let i=0; i<arr.length; i++){
+        arr[i].title = arr[i].title.replace('15', '10')
+    }
+}
+
+// const replace = arr => arr[].title.replace(`15`, `10`)
+replace(deals)
+// console.log(deals)
+
 
 
 
@@ -122,5 +152,10 @@ const deals = [
     whitespace in this string, since it seems
     to be displaying wrong on the live site.
 */
-
-//CODE HERE
+const replaceMonth = arr => {
+    for (let i=0; i<arr.length; i++){
+        arr[i].desc = arr[i].desc.replace('March', 'April')
+    }
+}
+replaceMonth(deals)
+// console.log(deals)
