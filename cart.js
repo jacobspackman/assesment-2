@@ -33,9 +33,7 @@ const cart = [
     }
 ]
 
-//CODE HERE
-
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, curr) => acc + curr.price, 0)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -53,7 +51,9 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    (cartTotal + (cartTotal * tax)) - couponValue
+}
 
 
 
@@ -78,7 +78,13 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    Customer Object will be called customer. it will have 4 properties.
+    first property will be called `name`, it will take a string, so we can identify each 
+    customer by their name
+    the second property will be called `items`, it will take an array of strings, because customers can buy more than one item
+    the thrid will be called `totalPrice`, this will be a number, so we can use math arguments on it.
+    the fourth property will be called `satisfied`, this will be a boolean, will let us know
+    if the customer was satisfied wiht our work or not.
 
 */
 
@@ -87,4 +93,9 @@ const cart = [
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    name: `Jacob`,
+    items: [`banana`, `milk`, `cookies`],
+    totalPrice: 9.46,
+    satisfied: true
+}
